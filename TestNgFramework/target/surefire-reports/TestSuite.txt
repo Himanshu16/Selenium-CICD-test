@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.563 s <<< FAILURE! - in TestSuite
+testngsample.DependentTest.geturl  Time elapsed: 0.017 s  <<< FAILURE!
+org.openqa.selenium.InvalidArgumentException: 
+invalid argument
+  (Session info: chrome=99.0.4844.82)
+Build info: version: '4.0.0-rc-3', revision: '5fe1af712f'
+System info: host: 'LAPTOP-DGIF1VTS', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fcffcc137ef938c3f5dfa5f8df66c60, get {url=www.facbook.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\Surbhi\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55423}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55423/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fcffcc137ef938c3f5dfa5f8df66c60
+	at testngsample.DependentTest.geturl(DependentTest.java:35)
+

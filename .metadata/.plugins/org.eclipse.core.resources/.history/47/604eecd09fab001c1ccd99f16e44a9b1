@@ -1,0 +1,11 @@
+package demoTestNg.testngdemo;
+
+import org.testng.annotations.Test;
+
+public class sample {
+
+	@Test
+	public void testmethod(){
+		
+	}
+}

@@ -1,0 +1,39 @@
+package TestNGBasics;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+class Carapilogin {
+	@BeforeTest
+	
+	public void acceptcookies()
+	{
+		System.out.println("Home Loan cookies accepted");
+	}
+
+	@Test
+	public void start() {
+		System.out.println("API login");
+	}
+	
+	@Test
+	public void verify() {
+		System.out.println("verify login");
+	}
+	
+	@Test
+	public void test()
+	{
+		System.out.println("test pass");
+	}
+	
+	@AfterTest
+	
+	public void clearcookies()
+	{
+	System.out.println("car loan cookies cleared");	
+	}
+	
+	
+}

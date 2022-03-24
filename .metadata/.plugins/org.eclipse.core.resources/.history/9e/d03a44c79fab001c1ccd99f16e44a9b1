@@ -1,0 +1,9 @@
+package demoTestNg.testngdemo;
+
+public class sample {
+
+	@Test
+	public void testmethod(){
+		
+	}
+}

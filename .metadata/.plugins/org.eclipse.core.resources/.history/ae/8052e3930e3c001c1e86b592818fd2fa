@@ -1,0 +1,54 @@
+package SeleniumPractice;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Assignment {
+
+	public static String browser = "chrome";
+	public static WebDriver driver;
+
+	// method for driver setup 
+
+	void driverSetup() {
+		if (browser.contains("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}
+		else
+		{
+			WebDriverManager.edgedriver().setup();
+			driver= new EdgeDriver();
+		}
+	}
+
+	// method for basic navigation and getting url 
+	
+	void basics()
+
+	{
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+	}
+
+	void logical() {
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Assignment as = new Assignment();
+
+		as.driverSetup();
+		as.basics();
+
+	}
+
+}

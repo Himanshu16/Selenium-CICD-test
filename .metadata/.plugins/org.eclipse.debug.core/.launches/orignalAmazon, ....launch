@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Selenium-mvn2"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+    <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+    <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+        <listEntry value="SeleniumPractice.Bigbazar"/>
+        <listEntry value="SeleniumPractice.actions"/>
+        <listEntry value="orignalAmazon"/>
+        <listEntry value="SeleniumPractice.windowhandling"/>
+        <listEntry value="SeleniumPractice.framesAssig2"/>
+        <listEntry value="SeleniumPractice.windowhandlingAssig"/>
+        <listEntry value="SeleniumPractice.RTE"/>
+        <listEntry value="SeleniumPractice.test4"/>
+        <listEntry value="SeleniumPractice.ScrollingBehav"/>
+        <listEntry value="SeleniumPractice.dates"/>
+        <listEntry value="SeleniumPractice.Assignment"/>
+        <listEntry value="SeleniumPractice.AmazonQuestion"/>
+        <listEntry value="SeleniumPractice.SampleClass"/>
+        <listEntry value="SeleniumPractice.waitexe"/>
+        <listEntry value="SeleniumPractice.StreamsT"/>
+        <listEntry value="TestNGBasics.getStarted"/>
+        <listEntry value="SeleniumPractice.sortstream"/>
+    </listAttribute>
+    <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+    <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+    <stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+    <intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>

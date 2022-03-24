@@ -1,0 +1,13 @@
+package SeleniumPractice;
+
+public class Assignment {
+	
+	public static String browser = "chrome";
+	public static WebElementDriver driver;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

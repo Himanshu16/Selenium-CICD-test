@@ -1,0 +1,69 @@
+package SeleniumPractice;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class dates {
+
+	public static String browser = "chrome";
+	public static WebDriver driver;
+
+	// method for driver setup
+
+	void driverSetup() {
+		if (browser.contains("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		} else {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+	}
+
+	// method for basic navigation and getting url
+
+	void basics()
+
+	{
+		driver.get("https://www.goibibo.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+	}
+
+	//logical method 
+	
+	void logical() 
+	{
+		driver.findElement(By.id("gosuggest_inputSrc")).click();
+		driver.findElement(By.id("gosuggest_inputSrc")).sendKeys("Bhopal");
+		
+		driver.findElement(By.id("gosuggest_inputDest")).click();
+		driver.findElement(By.id("gosuggest_inputDest")).sendKeys("pune");
+		
+		driver.findElement(By.id("departureCalendar")).click();
+		//driver.findElement(By.)
+      
+	}
+ 
+	//main method
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		dates as = new dates();
+
+		as.driverSetup();
+		as.basics();
+		as.logical();
+
+	}
+
+}

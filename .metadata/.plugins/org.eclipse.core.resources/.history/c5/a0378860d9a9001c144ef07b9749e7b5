@@ -1,0 +1,31 @@
+package testngsample;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class Hierarchy {
+	
+	@BeforeSuite
+	public void beforesuite()
+	{
+		System.out.println("this is before suite");
+	}
+	
+	@AfterSuite
+	public void aftersuite() {
+		System.out.println("this is after suite");
+	}
+	
+	@BeforeClass
+	public void beforeclass() {
+		System.out.println("this is before class");
+	}
+	
+	@AfterClass
+	public void afterclass() {
+		System.out.println("this is after class");
+	}
+}

@@ -1,0 +1,11 @@
+package demoTestNg.testngdemo;
+
+import org.junit.jupiter.api.Test;
+
+public class sample {
+
+	@Test
+	public void testmethod(){
+		System.out.println("this is testmethod2");
+	}
+}

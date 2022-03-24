@@ -1,0 +1,77 @@
+package SeleniumPractice;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class dates {
+
+	public static String browser = "chrome";
+	public static WebDriver driver;
+
+	// method for driver setup
+
+	void driverSetup() {
+		if (browser.contains("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		} else {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+	}
+
+	// method for basic navigation and getting url
+
+	void basics()
+
+	{
+		driver.get("https://www.path2usa.com/travel-companions");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+	}
+
+	//logical method 
+	
+	void logical() 
+	{
+		driver.findElement(By.name("travel_from")).sendKeys("sp");
+		List<WebElement> TF_options = driver.findElements(By.cssSelector("div#ajax_listOfOptions"));
+		
+		for(WebElement option:TF_options)
+		{
+			if(option.getText().equalsIgnoreCase("India is my country"))
+			{
+				option.click();
+				
+				driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+				break;
+			}
+		}
+		
+      
+	}
+ 
+	//main method
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		dates as = new dates();
+
+		as.driverSetup();
+		as.basics();
+		as.logical();
+
+	}
+
+}

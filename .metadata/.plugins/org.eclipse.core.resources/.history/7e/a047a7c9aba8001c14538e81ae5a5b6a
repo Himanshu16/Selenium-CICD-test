@@ -1,0 +1,30 @@
+package TestNGBasics;
+
+import org.testng.annotations.Test;
+
+class Carappiumlogin {
+	@Test
+	
+	public void acceptcookies()
+	{
+		System.out.println("cookies accepted");
+	}
+
+	@Test
+	public void start() {
+		System.out.println("Mobile app login");
+	}
+	
+	@Test
+	public void test()
+	{
+		System.out.println("passed");
+	}
+	@Test
+	
+	public void clearcookies()
+	{
+	System.out.println("cookies cleared");	
+	}
+	
+}

@@ -1,0 +1,28 @@
+package TestNGBasics;
+
+import org.testng.annotations.Test;
+
+class Homeloanforcar {
+	@Test
+	
+	public void acceptcookies()
+	{
+		System.out.println("cookies accepted");
+	}
+
+	@Test
+	public void start() {
+		System.out.println("get loan");
+	}
+	
+	@Test
+	public void test()
+	{
+		System.out.println("passed");
+	}
+	@Test
+	public void clearcookies()
+	{
+	System.out.println("cookies cleared");	
+	
+}

@@ -1,0 +1,29 @@
+package TestNGBasics;
+
+import org.testng.annotations.Test;
+
+class CarseleniumLogin {
+	@Test
+	
+	public void acceptcookies()
+	{
+		System.out.println("cookies accepted");
+	}
+
+	@Test
+	public void start() {
+		System.out.println("Car selenium login passed");
+	}
+	
+	@Test
+	public void test()
+	{
+		System.out.println("Fail but passed");
+	}
+	
+	@Test
+	public void clearcookies()
+	{
+	System.out.println("cookies cleared");	
+	}
+}

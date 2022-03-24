@@ -1,0 +1,93 @@
+package SeleniumPractice;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class dates {
+
+	public static String browser = "chrome";
+	public static WebDriver driver;
+	public static String val ="Greenville-Spartanburg International Airport (Roger Milliken Field) (GSP) Greer";
+	public static String val2 ="Albuquerque International Sunport (ABQ) Albuquerque";
+
+	// method for driver setup
+
+	void driverSetup() {
+		if (browser.contains("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		} else {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+	}
+
+	// method for basic navigation and getting url
+
+	void basics()
+
+	{
+		driver.get("https://www.path2usa.com/travel-companions");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+	}
+
+	//logical method 
+	
+	void logical() 
+	{
+		// for start location boarding point
+		
+		driver.findElement(By.name("travel_from")).sendKeys("sp");
+		List<WebElement> TF_options = driver.findElements(By.cssSelector("div[class='optionDiv']"));
+		
+		for(WebElement option:TF_options)
+		{
+			if(option.getText().equalsIgnoreCase(val))
+			{
+				option.click();
+				
+				driver.findElement(By.name("travel_from")).sendKeys(Keys.ENTER);
+				break;
+			}
+		}
+		
+		//for end dropoff location
+		
+		driver.findElement(By.name("travel_to")).sendKeys("s");
+		List<WebElement>DF_options= driver.findElements(By.cssSelector("div[class='optionDiv']"));
+
+		for(WebElement option:DF_options)
+		{
+			if(option.getText().equalsIgnoreCase(val2))
+			{
+				
+			}
+		}
+      
+	}
+ 
+	//main method
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		dates as = new dates();
+
+		as.driverSetup();
+		as.basics();
+		as.logical();
+
+	}
+
+}

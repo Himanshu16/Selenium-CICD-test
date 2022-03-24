@@ -1,0 +1,18 @@
+package demoTestNg.testngdemo;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class App2Test {
+    
+  @Test
+  public void shouldAnswerWithTrue() {
+    assertTrue(true);
+  }
+  
+  @Test
+  public void method() {
+	  System.out.println("this is test");
+  }
+}

@@ -1,0 +1,50 @@
+package SeleniumPractice;
+
+import java.sql.DriverManager;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class MakeMyTrip {
+	
+	public static String browser="chrome";
+	public static WebDriver driver;
+	
+	void driverSetup()
+	{
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+	}
+	
+	void basics()
+	{
+		driver.get("https://www.makemytrip.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
+		driver.manage().window().maximize();
+	}
+	
+	void Logical()
+	{
+		
+	driver.findElement(By.xpath("//input[@id='fromCity']")).click();
+	}
+	
+	
+	 //main method
+		public static void main(String[] args)
+		{
+		
+			MakeMyTrip cl = new MakeMyTrip();
+			
+			cl.driverSetup();
+			cl.basics();
+			cl.Logical();
+			
+		}
+		}
+

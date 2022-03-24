@@ -1,0 +1,35 @@
+package SeleniumPractice;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SampleClass {
+
+	public static String browser = "chrome";
+	public static WebDriver driver;
+
+	public static void main(String[] args) {
+		
+		if (browser.equals("chrome"))
+		{
+		 
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			
+		}
+		else if(browser.equals("edge")) 
+		{
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+		else
+		{
+			WebDriverManager.firefoxdriver().setup();
+		}
+
+	}
+
+}

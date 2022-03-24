@@ -1,0 +1,37 @@
+package TestNGBasics;
+
+import org.testng.annotations.Test;
+
+class Carapilogin {
+	@Test
+	
+	public void acceptcookies()
+	{
+		System.out.println("cookies accepted");
+	}
+
+	@Test
+	public void start() {
+		System.out.println("API login");
+	}
+	
+	@Test
+	public void verify() {
+		System.out.println("verify login");
+	}
+	
+	@Test
+	public void test()
+	{
+		System.out.println("test pass");
+	}
+	
+	@Test
+	
+	public void clearcookies()
+	{
+	System.out.println("cookies cleared");	
+	}
+	
+	
+}
